@@ -3,19 +3,13 @@
       <div class="slide">
 
         <div id="1">
-
           <h1> Qual seu nome?</h1>
-
             <input v-model="dados.q1"  >
-
         </div>
 
         <div id="2" hidden>
-
           <h1> Qual seu whats?</h1>
-
           <input v-model="dados.q2">
-
         </div>
 
         <div id="3" hidden>
@@ -71,12 +65,9 @@
               <input type="radio"  value="D" v-model="dados.q6" />
               <label for="D"> Acima de R$ 100.000 </label>
             </div>
-
           </div>
 
-
         </div>
-
 
         <div id="7" hidden>
 
@@ -108,12 +99,8 @@
               <input type="radio"  value="E" v-model="dados.q7" />
               <label for="E"> Acima de R$ 10.000 </label>
             </div>
-
           </div>
-
-
         </div>
-
 
 
         <div id="8" hidden>
@@ -142,13 +129,10 @@
               <label for="D"> Mais de 3 anos   </label>
             </div>
 
-
           </div>
 
 
         </div>
-
-
 
 
         <h1 id="7" hidden> Button pra mandar os dados pra api </h1>
@@ -193,30 +177,27 @@ const isActive = ref(1);
 function next() {
 
   const array = document.querySelector('.slide').childNodes;
-  const index = isActive.value;
+  const index = ref(isActive.value);
 
   const button = document.querySelector('.button').childNodes;
 
+  if (isActive.value === Number(array[index.value - 1].id)) {
 
+    array[index.value - 1].hidden = 'true';
 
-  if (isActive.value === Number(array[index - 1].id)) {
-
-    array[index - 1].hidden = 'true';
-
-    // if(isActive.value === 5 && dados.q5 === 'sim'){
-    //   isActive.value++;
-    //   isActive.value++;
-    // }
+    if(isActive.value === 5 && dados.q5 === 'sim'){
+      index.value++;
+      isActive.value++;
+    }
 
     isActive.value++;
 
-    array[index].hidden = '';
+    array[index.value].hidden = '';
   }
 
   if (isActive.value > (array.length - 1) ){
     button[0].hidden = 'true';
   }
-
 }
 
 </script>
