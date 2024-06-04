@@ -44,7 +44,7 @@
 
           <h1> Qual a média de faturamento mensal do seu negócio ? </h1>
 
-          <div class="grid items-center">
+          <div class="flex flex-col items-start">
 
             <div class="flex items-center gap-2 justify-center">
               <input type="radio"  value="A" v-model="dados.q6" />
@@ -154,7 +154,7 @@
 
 import {reactive, ref} from "vue";
 
-const dados = reactive([{
+const dados = reactive({
   q1: '',
   q2: '',
   q3: '',
@@ -163,7 +163,7 @@ const dados = reactive([{
   q6: '',
   q7: '',
   q8: '',
-}])
+})
 
 
 function show(){
