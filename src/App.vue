@@ -146,8 +146,7 @@
 
 
         <div id="8" hidden>
-
-
+          
           <h1 class="text-white text-xl tracking-wide mb-10"> Há quanto tempo sua marca está no mercado?  </h1>
 
           <div class="flex flex-col gap-4">
