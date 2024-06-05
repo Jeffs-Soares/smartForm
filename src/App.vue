@@ -1,11 +1,18 @@
 <template>
-  <div class="grid justify-center pt-10 bg-gradient-to-r from-gray-100 to-blue-400 h-screen">
+  <div class="grid h-screen bg-teal-400 py-24 px-32 ">
       <div class="slide">
 
         <div id="1">
-          <h1> Qual seu nome?</h1>
-            <input v-model="dados.q1"  >
-        </div>
+          <h1 class="text-white text-xl tracking-wide mb-10"> Qual seu nome?</h1>
+           <!--  <input autofocus class="bg-teal-400 placeholder:text-white focus:outline-none caret-white text-white focus:font-bold" placeholder="Seu nome aqui..." v-model="dados.q1"> -->
+        
+            <div class="relative z-0 w-full mb-5 group" id="1">
+              <input autofocus type="email" class="block py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-2 border-teal-300 appearance-none dark:text-white dark:border-teal-600 dark:focus:border-teal-500 focus:outline-none focus:ring-0 focus:border-teal-600 peer placeholder:text-white focus:placeholder:text-teal-400 text-white" placeholder="Seu nome aqui..." required  v-model="dados.q1" />
+             
+              <label for="floating_email" class="peer-focus:font-medium absolute text-sm text-teal-500 dark:text-teal-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-teal-600 peer-focus:dark:text-white peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Seu nome</label>
+          </div>
+
+          </div>
 
         <div id="2" hidden>
           <h1> Qual seu whats?</h1>
@@ -141,7 +148,13 @@
 
       <div class="button">
 
-        <button @click="next" > Next >> </button>
+        <button class="flex gap-2 items-center text-teal-700 hover:text-white border border-teal-700 hover:bg-teal-800 focus:ring-4 focus:outline-none focus:ring-teal-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-teal-700 dark:text-teal-700 dark:hover:text-white dark:hover:bg-teal-600 dark:focus:ring-teal-800" @click="next" > Next
+
+          <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+            </svg>
+
+        </button>
 
       </div>
 
