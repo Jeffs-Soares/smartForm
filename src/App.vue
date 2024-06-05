@@ -134,7 +134,10 @@
 
 
               <input class="hidden peer" type="radio"  value="E" v-model="dados.q7" />
-              <label class="text-sm inline-flex items-center justify-between w-full p-5 text-teal-500 bg-white border border-teal-200 rounded-lg cursor-pointer dark:hover:text-teal-300 dark:border-teal-700 dark:peer-checked:text-teal-500 peer-checked:border-teal-600 peer-checked:text-teal-600 hover:text-teal-600 hover:bg-teal-100 dark:text-teal-400 dark:bg-teal-800 dark:hover:bg-teal-700 min-w-full mb-8" for="E"> Acima de R$ 10.000 </label>
+              <label class="text-sm inline-flex items-center justify-between w-full p-5 text-teal-500 bg-white border border-teal-200 rounded-lg cursor-pointer dark:hover:text-teal-300 dark:border-teal-700 dark:peer-checked:text-teal-500 peer-checked:border-teal-600 peer-checked:text-teal-600 hover:text-teal-600 hover:bg-teal-100 dark:text-teal-400 dark:bg-teal-800 dark:hover:bg-teal-700 min-w-full " for="E"> Acima de R$ 10.000 </label>
+
+            <input class="hidden peer" type="radio"  value="E" v-model="dados.q7" />
+            <label class=" " for="E">  </label>
 
 
 
