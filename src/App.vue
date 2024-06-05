@@ -54,14 +54,31 @@
 
         <div id="5" hidden>
 
+
+<!--          <div class="space-y-4">-->
+<!--            <label class="flex items-center space-x-2">-->
+<!--              <input type="radio" name="option" class="hidden peer" />-->
+<!--              <span class="text-gray-700 peer-checked:text-blue-500">Option 1</span>-->
+<!--            </label>-->
+<!--            <label class="flex items-center space-x-2">-->
+<!--              <input type="radio" name="option" class="hidden peer" />-->
+<!--              <span class="text-gray-700 peer-checked:text-blue-500">Option 2</span>-->
+<!--            </label>-->
+<!--            <label class="flex items-center space-x-2">-->
+<!--              <input type="radio" name="option" class="hidden peer" />-->
+<!--              <span class="text-gray-700 peer-checked:text-blue-500">Option 3</span>-->
+<!--            </label>-->
+<!--          </div>-->
+
+
           <h1 class="text-white text-xl tracking-wide mb-10"> Seu negócio fatura mais de R$ 15.000 por mês? </h1>
           <div class="flex flex-col gap-4">
 
           <input class="hidden peer" type="radio"  value="sim" v-model="dados.q5" />
-          <label class="inline-flex items-center justify-between w-full p-5 text-teal-500 bg-white border border-teal-200 rounded-lg cursor-pointer dark:hover:text-teal-300 dark:border-teal-700 dark:peer-checked:text-teal-500 peer-checked:border-teal-600 peer-checked:text-teal-600 hover:text-teal-600 hover:bg-teal-100 dark:text-teal-400 dark:bg-teal-800 dark:hover:bg-teal-700 w-max min-w-full" for="one"> Sim </label>
+          <label class="text-sm inline-flex items-center justify-between p-5 text-teal-500 bg-white border border-teal-200 rounded-lg cursor-pointer dark:hover:text-teal-300 dark:border-teal-700 dark:peer-checked:text-teal-500 peer-checked:border-teal-600 peer-checked:text-teal-600 hover:text-teal-600 hover:bg-teal-100 dark:text-teal-400 dark:bg-teal-800 dark:hover:bg-teal-700 w-max min-w-full peer-checked:bg-red-600" for="one"> Sim </label>
 
           <input class="hidden peer" type="radio"  value="nao" v-model="dados.q5" />
-          <label class="inline-flex items-center justify-between w-full p-5 text-teal-500 bg-white border border-teal-200 rounded-lg cursor-pointer dark:hover:text-teal-300 dark:border-teal-700 dark:peer-checked:text-teal-500 peer-checked:border-teal-600 peer-checked:text-teal-600 hover:text-teal-600 hover:bg-teal-100 dark:text-teal-400 dark:bg-teal-800 dark:hover:bg-teal-700 w-max min-w-full" for="two"> Não </label>
+          <label class="text-sm inline-flex items-center justify-between p-5 text-teal-500 bg-white border border-teal-200 rounded-lg cursor-pointer dark:hover:text-teal-300 dark:border-teal-700 dark:peer-checked:text-teal-500 peer-checked:border-teal-600 peer-checked:text-teal-600 hover:text-teal-600 hover:bg-teal-100 dark:text-teal-400 dark:bg-teal-800 dark:hover:bg-teal-700 w-max min-w-full " for="two"> Não </label>
 
           </div>
 
@@ -73,16 +90,16 @@
           <div class="flex flex-col gap-4">
 
               <input class="hidden peer" type="radio"  value="A" v-model="dados.q6" />
-              <label class="inline-flex items-center justify-between w-full p-5 text-teal-500 bg-white border border-teal-200 rounded-lg cursor-pointer dark:hover:text-teal-300 dark:border-teal-700 dark:peer-checked:text-teal-500 peer-checked:border-teal-600 peer-checked:text-teal-600 hover:text-teal-600 hover:bg-teal-100 dark:text-teal-400 dark:bg-teal-800 dark:hover:bg-teal-700 w-max min-w-full" for="A"> Entre R$ 15.000 a R$ 30.000 </label>
+              <label class="text-sm inline-flex items-center justify-between w-full p-5 text-teal-500 bg-white border border-teal-200 rounded-lg cursor-pointer dark:hover:text-teal-300 dark:border-teal-700 dark:peer-checked:text-teal-500 peer-checked:border-teal-600 peer-checked:text-teal-600 hover:text-teal-600 hover:bg-teal-100 dark:text-teal-400 dark:bg-teal-800 dark:hover:bg-teal-700 w-max min-w-full" for="A"> Entre R$ 15.000 a R$ 30.000 </label>
 
               <input class="hidden peer" type="radio"  value="B" v-model="dados.q6" />
-              <label class="inline-flex items-center justify-between w-full p-5 text-teal-500 bg-white border border-teal-200 rounded-lg cursor-pointer dark:hover:text-teal-300 dark:border-teal-700 dark:peer-checked:text-teal-500 peer-checked:border-teal-600 peer-checked:text-teal-600 hover:text-teal-600 hover:bg-teal-100 dark:text-teal-400 dark:bg-teal-800 dark:hover:bg-teal-700 w-max min-w-full" for="B"> Entre R$ 30.000 a R$ 50.000 </label>
+              <label class=" text-sm inline-flex items-center justify-between w-full p-5 text-teal-500 bg-white border border-teal-200 rounded-lg cursor-pointer dark:hover:text-teal-300 dark:border-teal-700 dark:peer-checked:text-teal-500 peer-checked:border-teal-600 peer-checked:text-teal-600 hover:text-teal-600 hover:bg-teal-100 dark:text-teal-400 dark:bg-teal-800 dark:hover:bg-teal-700 w-max min-w-full" for="B"> Entre R$ 30.000 a R$ 50.000 </label>
 
               <input class="hidden peer" type="radio"  value="C" v-model="dados.q6" />
-              <label class="inline-flex items-center justify-between w-full p-5 text-teal-500 bg-white border border-teal-200 rounded-lg cursor-pointer dark:hover:text-teal-300 dark:border-teal-700 dark:peer-checked:text-teal-500 peer-checked:border-teal-600 peer-checked:text-teal-600 hover:text-teal-600 hover:bg-teal-100 dark:text-teal-400 dark:bg-teal-800 dark:hover:bg-teal-700 w-max min-w-full" for="C"> Entre R$ 50.000 a R$ 100.000 </label>
+              <label class="text-sm inline-flex items-center justify-between w-full p-5 text-teal-500 bg-white border border-teal-200 rounded-lg cursor-pointer dark:hover:text-teal-300 dark:border-teal-700 dark:peer-checked:text-teal-500 peer-checked:border-teal-600 peer-checked:text-teal-600 hover:text-teal-600 hover:bg-teal-100 dark:text-teal-400 dark:bg-teal-800 dark:hover:bg-teal-700 w-max min-w-full" for="C"> Entre R$ 50.000 a R$ 100.000 </label>
 
               <input class="hidden peer" type="radio"  value="D" v-model="dados.q6" />
-              <label class="inline-flex items-center justify-between w-full p-5 text-teal-500 bg-white border border-teal-200 rounded-lg cursor-pointer dark:hover:text-teal-300 dark:border-teal-700 dark:peer-checked:text-teal-500 peer-checked:border-teal-600 peer-checked:text-teal-600 hover:text-teal-600 hover:bg-teal-100 dark:text-teal-400 dark:bg-teal-800 dark:hover:bg-teal-700 w-max min-w-full" for="D"> Acima de R$ 100.000 </label>
+              <label class="text-sm inline-flex items-center justify-between w-full p-5 text-teal-500 bg-white border border-teal-200 rounded-lg cursor-pointer dark:hover:text-teal-300 dark:border-teal-700 dark:peer-checked:text-teal-500 peer-checked:border-teal-600 peer-checked:text-teal-600 hover:text-teal-600 hover:bg-teal-100 dark:text-teal-400 dark:bg-teal-800 dark:hover:bg-teal-700 w-max min-w-full" for="D"> Acima de R$ 100.000 </label>
 
 
             </div>
@@ -97,27 +114,27 @@
 
 
               <input class="hidden peer" type="radio"  value="A" v-model="dados.q7" />
-              <label class="inline-flex items-center justify-between w-full p-5 text-teal-500 bg-white border border-teal-200 rounded-lg cursor-pointer dark:hover:text-teal-300 dark:border-teal-700 dark:peer-checked:text-teal-500 peer-checked:border-teal-600 peer-checked:text-teal-600 hover:text-teal-600 hover:bg-teal-100 dark:text-teal-400 dark:bg-teal-800 dark:hover:bg-teal-700 w-max min-w-full" for="A"> Não invisto ainda. </label>
+              <label class="text-sm inline-flex items-center justify-between w-full p-5 text-teal-500 bg-white border border-teal-200 rounded-lg cursor-pointer dark:hover:text-teal-300 dark:border-teal-700 dark:peer-checked:text-teal-500 peer-checked:border-teal-600 peer-checked:text-teal-600 hover:text-teal-600 hover:bg-teal-100 dark:text-teal-400 dark:bg-teal-800 dark:hover:bg-teal-700 w-max min-w-full" for="A"> Não invisto ainda. </label>
 
 
 
               <input class="hidden peer" type="radio"  value="B" v-model="dados.q7" />
-              <label class="inline-flex items-center justify-between w-full p-5 text-teal-500 bg-white border border-teal-200 rounded-lg cursor-pointer dark:hover:text-teal-300 dark:border-teal-700 dark:peer-checked:text-teal-500 peer-checked:border-teal-600 peer-checked:text-teal-600 hover:text-teal-600 hover:bg-teal-100 dark:text-teal-400 dark:bg-teal-800 dark:hover:bg-teal-700 w-max min-w-full" for="B"> Entre R$ 500 A R$1.000  </label>
+              <label class="text-sm inline-flex items-center justify-between w-full p-5 text-teal-500 bg-white border border-teal-200 rounded-lg cursor-pointer dark:hover:text-teal-300 dark:border-teal-700 dark:peer-checked:text-teal-500 peer-checked:border-teal-600 peer-checked:text-teal-600 hover:text-teal-600 hover:bg-teal-100 dark:text-teal-400 dark:bg-teal-800 dark:hover:bg-teal-700 w-max min-w-full" for="B"> Entre R$ 500 A R$1.000  </label>
 
 
 
               <input class="hidden peer" type="radio"  value="C" v-model="dados.q7" />
-              <label class="inline-flex items-center justify-between w-full p-5 text-teal-500 bg-white border border-teal-200 rounded-lg cursor-pointer dark:hover:text-teal-300 dark:border-teal-700 dark:peer-checked:text-teal-500 peer-checked:border-teal-600 peer-checked:text-teal-600 hover:text-teal-600 hover:bg-teal-100 dark:text-teal-400 dark:bg-teal-800 dark:hover:bg-teal-700 w-max min-w-full" for="C"> Entre R$ 2.000 a R$ 5.000 </label>
+              <label class="text-sm inline-flex items-center justify-between w-full p-5 text-teal-500 bg-white border border-teal-200 rounded-lg cursor-pointer dark:hover:text-teal-300 dark:border-teal-700 dark:peer-checked:text-teal-500 peer-checked:border-teal-600 peer-checked:text-teal-600 hover:text-teal-600 hover:bg-teal-100 dark:text-teal-400 dark:bg-teal-800 dark:hover:bg-teal-700 w-max min-w-full" for="C"> Entre R$ 2.000 a R$ 5.000 </label>
 
 
 
               <input class="hidden peer" type="radio"  value="D" v-model="dados.q7" />
-              <label class="inline-flex items-center justify-between w-full p-5 text-teal-500 bg-white border border-teal-200 rounded-lg cursor-pointer dark:hover:text-teal-300 dark:border-teal-700 dark:peer-checked:text-teal-500 peer-checked:border-teal-600 peer-checked:text-teal-600 hover:text-teal-600 hover:bg-teal-100 dark:text-teal-400 dark:bg-teal-800 dark:hover:bg-teal-700 w-max min-w-full" for="D"> Entre R$ 5.000 a R$ 10.000  </label>
+              <label class="text-sm inline-flex items-center justify-between w-full p-5 text-teal-500 bg-white border border-teal-200 rounded-lg cursor-pointer dark:hover:text-teal-300 dark:border-teal-700 dark:peer-checked:text-teal-500 peer-checked:border-teal-600 peer-checked:text-teal-600 hover:text-teal-600 hover:bg-teal-100 dark:text-teal-400 dark:bg-teal-800 dark:hover:bg-teal-700 w-max min-w-full" for="D"> Entre R$ 5.000 a R$ 10.000  </label>
 
 
 
               <input class="hidden peer" type="radio"  value="E" v-model="dados.q7" />
-              <label class="inline-flex items-center justify-between w-full p-5 text-teal-500 bg-white border border-teal-200 rounded-lg cursor-pointer dark:hover:text-teal-300 dark:border-teal-700 dark:peer-checked:text-teal-500 peer-checked:border-teal-600 peer-checked:text-teal-600 hover:text-teal-600 hover:bg-teal-100 dark:text-teal-400 dark:bg-teal-800 dark:hover:bg-teal-700 w-max min-w-full" for="E"> Acima de R$ 10.000 </label>
+              <label class="text-sm inline-flex items-center justify-between w-full p-5 text-teal-500 bg-white border border-teal-200 rounded-lg cursor-pointer dark:hover:text-teal-300 dark:border-teal-700 dark:peer-checked:text-teal-500 peer-checked:border-teal-600 peer-checked:text-teal-600 hover:text-teal-600 hover:bg-teal-100 dark:text-teal-400 dark:bg-teal-800 dark:hover:bg-teal-700 min-w-full mb-8" for="E"> Acima de R$ 10.000 </label>
 
 
 
@@ -134,22 +151,22 @@
 
 
               <input class="hidden peer" type="radio"  value="A" v-model="dados.q8" />
-              <label class="inline-flex items-center justify-between w-full p-5 text-teal-500 bg-white border border-teal-200 rounded-lg cursor-pointer dark:hover:text-teal-300 dark:border-teal-700 dark:peer-checked:text-teal-500 peer-checked:border-teal-600 peer-checked:text-teal-600 hover:text-teal-600 hover:bg-teal-100 dark:text-teal-400 dark:bg-teal-800 dark:hover:bg-teal-700 w-max min-w-full" for="A"> Menos de 1 ano </label>
+              <label class="text-sm inline-flex items-center justify-between w-full p-5 text-teal-500 bg-white border border-teal-200 rounded-lg cursor-pointer dark:hover:text-teal-300 dark:border-teal-700 dark:peer-checked:text-teal-500 peer-checked:border-teal-600 peer-checked:text-teal-600 hover:text-teal-600 hover:bg-teal-100 dark:text-teal-400 dark:bg-teal-800 dark:hover:bg-teal-700 w-max min-w-full" for="A"> Menos de 1 ano </label>
 
 
 
               <input class="hidden peer" type="radio"  value="B" v-model="dados.q8" />
-              <label class="inline-flex items-center justify-between w-full p-5 text-teal-500 bg-white border border-teal-200 rounded-lg cursor-pointer dark:hover:text-teal-300 dark:border-teal-700 dark:peer-checked:text-teal-500 peer-checked:border-teal-600 peer-checked:text-teal-600 hover:text-teal-600 hover:bg-teal-100 dark:text-teal-400 dark:bg-teal-800 dark:hover:bg-teal-700 w-max min-w-full" for="B"> Entre 1 a 2 anos  </label>
+              <label class="text-sm inline-flex items-center justify-between w-full p-5 text-teal-500 bg-white border border-teal-200 rounded-lg cursor-pointer dark:hover:text-teal-300 dark:border-teal-700 dark:peer-checked:text-teal-500 peer-checked:border-teal-600 peer-checked:text-teal-600 hover:text-teal-600 hover:bg-teal-100 dark:text-teal-400 dark:bg-teal-800 dark:hover:bg-teal-700 w-max min-w-full" for="B"> Entre 1 a 2 anos  </label>
 
 
 
               <input class="hidden peer" type="radio"  value="C" v-model="dados.q8" />
-              <label class="inline-flex items-center justify-between w-full p-5 text-teal-500 bg-white border border-teal-200 rounded-lg cursor-pointer dark:hover:text-teal-300 dark:border-teal-700 dark:peer-checked:text-teal-500 peer-checked:border-teal-600 peer-checked:text-teal-600 hover:text-teal-600 hover:bg-teal-100 dark:text-teal-400 dark:bg-teal-800 dark:hover:bg-teal-700 w-max min-w-full" for="C"> Entre 2 a 3 anos </label>
+              <label class="text-sm inline-flex items-center justify-between w-full p-5 text-teal-500 bg-white border border-teal-200 rounded-lg cursor-pointer dark:hover:text-teal-300 dark:border-teal-700 dark:peer-checked:text-teal-500 peer-checked:border-teal-600 peer-checked:text-teal-600 hover:text-teal-600 hover:bg-teal-100 dark:text-teal-400 dark:bg-teal-800 dark:hover:bg-teal-700 w-max min-w-full" for="C"> Entre 2 a 3 anos </label>
 
 
 
               <input class="hidden peer" type="radio"  value="D" v-model="dados.q8" />
-              <label class="inline-flex items-center justify-between w-full p-5 text-teal-500 bg-white border border-teal-200 rounded-lg cursor-pointer dark:hover:text-teal-300 dark:border-teal-700 dark:peer-checked:text-teal-500 peer-checked:border-teal-600 peer-checked:text-teal-600 hover:text-teal-600 hover:bg-teal-100 dark:text-teal-400 dark:bg-teal-800 dark:hover:bg-teal-700 w-max min-w-full" for="D"> Mais de 3 anos   </label>
+              <label class="text-sm inline-flex items-center justify-between w-full p-5 text-teal-500 bg-white border border-teal-200 rounded-lg cursor-pointer dark:hover:text-teal-300 dark:border-teal-700 dark:peer-checked:text-teal-500 peer-checked:border-teal-600 peer-checked:text-teal-600 hover:text-teal-600 hover:bg-teal-100 dark:text-teal-400 dark:bg-teal-800 dark:hover:bg-teal-700 w-max min-w-full" for="D"> Mais de 3 anos   </label>
 
 
           </div>
@@ -159,16 +176,13 @@
 
         <div class="text-center" id="7" hidden>
 
-          <h2>  Tem pressa? fale agora com nosso consultor no WhatsApp!!! </h2>
+          <h2 class="font-medium text-2xl">  Tem pressa? fale agora com nosso consultor no WhatsApp!!! </h2>
 
-          <p> Aperte no botão abaixo! </p>
+          <p class="py-8"> Clique no botão abaixo! </p>
 
-          <button> Chamar consultor</button>
-
-
+          <button class=" gap-2 items-center text-teal-700 hover:text-white border border-teal-700 hover:bg-teal-800 focus:outline-none focus:ring-teal-300 font-medium rounded-lg px-5 py-2.5 text-center me-2 mb-2 dark:border-teal-700 dark:text-teal-700 dark:hover:text-white dark:hover:bg-teal-600 dark:focus:ring-teal-800 text-xl"> Chamar consultor</button>
 
         </div>
-
 
 
       </div>
