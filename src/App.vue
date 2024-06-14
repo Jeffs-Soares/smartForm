@@ -1,13 +1,9 @@
 <template>
-  <div class="grid h-screen bg-black py-24 px-32 bg-cover bg-gradient-to-r from-black via-sky-950 to-sky-600">
+  <div id="all" class="grid h-screen bg-black py-24 px-32 bg-cover bg-gradient-to-r from-black via-sky-950 to-sky-600">
     <form class="slide">
 
-
-
-  
-
-      <div id="1">
-        <h1 class="text-white text-2xl tracking-wide mb-10"> Qual seu nome?</h1>
+      <div id="1" class="show">
+        <h1 class="text-white text-2xl tracking-wide mb-10"> {{ isActive }} → Qual seu nome?</h1>
 
         <div class="relative z-0 w-full mb-5 group" id="1">
           
@@ -19,8 +15,8 @@
 
       </div>
 
-      <div id="2" hidden>
-        <h1 class="text-white text-2xl tracking-wide mb-10"> Qual seu whats?</h1>
+      <div id="2" hidden class="show">
+        <h1 class="text-white text-2xl tracking-wide mb-10"> {{ isActive }} → Qual seu whats?</h1>
         <div class="relative z-0 w-full mb-5 group">
 
           <input class="block py-2.5 px-0 w-max text-sm bg-transparent border-0 border-b-2 border-sky-300 appearance-none dark:text-white dark:border-sky-600 dark:focus:border-sky-500 focus:outline-none focus:ring-0 focus:border-sky-600 peer text-white" placeholder="" required v-model="dados.q2">
@@ -31,9 +27,9 @@
 
       </div>
 
-      <div id="3" hidden>
+      <div id="3" hidden class="show">
 
-        <h1 class="text-white text-2xl tracking-wide mb-10"> Qual seu site?</h1>
+        <h1 class="text-white text-2xl tracking-wide mb-10"> {{ isActive }} → Qual seu site?</h1>
         <div class="relative z-0 w-full mb-5 group">
 
           <input class="block py-2.5 px-0 w-max text-sm bg-transparent border-0 border-b-2 border-sky-300 appearance-none dark:text-white dark:border-sky-600 dark:focus:border-sky-500 focus:outline-none focus:ring-0 focus:border-sky-600 peer text-white" placeholder="" required v-model="dados.q3">
@@ -43,9 +39,9 @@
 
       </div>
 
-      <div id="4" hidden>
+      <div id="4" hidden class="show">
 
-        <h1 class="text-white text-2xl tracking-wide mb-10"> Qual seu instagram?</h1>
+        <h1 class="text-white text-2xl tracking-wide mb-10">{{ isActive }} → Qual seu instagram?</h1>
         <div class="relative z-0 w-full mb-5 group">
 
           <input class="block py-2.5 px-0 w-max text-sm bg-transparent border-0 border-b-2 border-sky-300 appearance-none dark:text-white dark:border-sky-600 dark:focus:border-sky-500 focus:outline-none focus:ring-0 focus:border-sky-600 peer text-white" placeholder="" required v-model="dados.q4">
@@ -55,20 +51,20 @@
 
       </div>
 
-      <div id="5" hidden>
+      <div id="5" hidden class="show">
 
-        <h1 class="text-white text-2xl tracking-wide mb-10"> Seu negócio fatura mais de R$ 15.000 por mês? </h1>
+        <h1 class="text-white text-2xl tracking-wide mb-10">{{ isActive }} → Seu negócio fatura mais de R$ 15.000 por mês? </h1>
         <div class="flex flex-col gap-4">
 
-          <li>
+          <li class="list-none">
             <input class="peer hidden" type="radio" name="input1" id="input1" value="sim" v-model="dados.q5" />
-            <label for="input1" class="text-xl inline-flex items-center justify-between p-4 text-white bg-white border border-sky-200 rounded-lg cursor-pointer dark:hover:text-sky-300 dark:border-sky-700 dark:peer-checked:text-white peer-checked:border-sky-200 peer-checked:border-collapse box-border peer-checked:text-white hover:text-white hover:bg-sky-200 dark:text-e-400 dark:bg-transparent dark:hover:bg-sky-700 w-max min-w-full transition ease-in-out delay-75"> Sim </label>
+            <label for="input1" class="text-xl inline-flex items-center justify-between p-4 text-white bg-white border border-sky-200 rounded-lg cursor-pointer dark:hover:text-sky-300 dark:border-sky-700 dark:peer-checked:text-white peer-checked:border-sky-200 peer-checked:border-collapse box-border peer-checked:text-white hover:text-white hover:bg-sky-200 dark:text-e-400 dark:bg-transparent w-[200px] dark:hover:bg-sky-700 transition ease-in-out delay-75"> Sim </label>
           </li>
 
-          <li>
+          <li class="list-none">
     
             <input class="peer hidden" type="radio" name="input2" id="input2"  value="nao" v-model="dados.q5" />
-            <label for="input2" class="text-xl inline-flex items-center justify-between p-4 text-white bg-white border border-sky-200 rounded-lg cursor-pointer dark:hover:text-sky-300 dark:border-sky-700 dark:peer-checked:text-white peer-checked:border-sky-200  peer-checked:border-collapse box-border peer-checked:text-white hover:text-white hover:bg-sky-200 dark:text-e-400 dark:bg-transparent dark:hover:bg-sky-700 w-max min-w-full transition ease-in-out delay-75"> Não </label>
+            <label for="input2" class="text-xl inline-flex items-center justify-between p-4 text-white bg-white border border-sky-200 rounded-lg cursor-pointer dark:hover:text-sky-300 dark:border-sky-700 dark:peer-checked:text-white peer-checked:border-sky-200  peer-checked:border-collapse box-border peer-checked:text-white hover:text-white hover:bg-sky-200 dark:text-e-400 dark:bg-transparent dark:hover:bg-sky-700 w-[200px] transition ease-in-out delay-75"> Não </label>
             
           </li>
             
@@ -76,31 +72,31 @@
 
       </div>
 
-      <div id="6" hidden>
+      <div id="6" hidden class="show">
 
-        <h1 class="text-white text-2xl tracking-wide mb-10"> Qual a média de faturamento mensal do seu negócio ? </h1>
+        <h1 class="text-white text-2xl tracking-wide mb-10">{{ isActive }} → Qual a média de faturamento mensal do seu negócio ? </h1>
         <div class="flex flex-col gap-4">
 
-          <li>
+          <li class="list-none">
             <input class="peer hidden" type="radio" name="input5" id="input5" value="A" v-model="dados.q6" />
-            <label for="input5" class="text-xl inline-flex items-center justify-between p-4 text-white bg-white border border-sky-200 rounded-lg cursor-pointer dark:hover:text-sky-300 dark:border-sky-700 dark:peer-checked:text-white peer-checked:border-sky-200 peer-checked:border-collapse box-border peer-checked:text-white hover:text-white hover:bg-sky-200 dark:text-e-400 dark:bg-transparent dark:hover:bg-sky-700 w-max min-w-full transition ease-in-out delay-75"> Entre R$ 15.000 a R$ 30.000 </label>
+            <label for="input5" class="text-xl inline-flex items-center justify-between p-4 text-white bg-white border border-sky-200 rounded-lg cursor-pointer dark:hover:text-sky-300 dark:border-sky-700 dark:peer-checked:text-white peer-checked:border-sky-200 peer-checked:border-collapse box-border peer-checked:text-white hover:text-white hover:bg-sky-200 dark:text-e-400 dark:bg-transparent dark:hover:bg-sky-700 min-w-[320px] transition ease-in-out delay-75"> Entre R$ 15.000 a R$ 30.000 </label>
           </li>
 
-          <li>
+          <li class="list-none">
 
             <input class="peer hidden" type="radio" name="input6" id="input6"  value="B" v-model="dados.q6" />
-            <label for="input6" class="text-xl inline-flex items-center justify-between p-4 text-white bg-white border border-sky-200 rounded-lg cursor-pointer dark:hover:text-sky-300 dark:border-sky-700 dark:peer-checked:text-white peer-checked:border-sky-200 peer-checked:border-collapse box-border peer-checked:text-white hover:text-white hover:bg-sky-200 dark:text-e-400 dark:bg-transparent dark:hover:bg-sky-700 w-max min-w-full transition ease-in-out delay-75"> Entre R$ 30.000 a R$ 50.000 </label>
+            <label for="input6" class="text-xl inline-flex items-center justify-between p-4 text-white bg-white border border-sky-200 rounded-lg cursor-pointer dark:hover:text-sky-300 dark:border-sky-700 dark:peer-checked:text-white peer-checked:border-sky-200 peer-checked:border-collapse box-border peer-checked:text-white hover:text-white hover:bg-sky-200 dark:text-e-400 dark:bg-transparent dark:hover:bg-sky-700 min-w-[320px] transition ease-in-out delay-75"> Entre R$ 30.000 a R$ 50.000 </label>
           </li>
             
 
-          <li>
+          <li class="list-none">
             <input class="hidden peer" type="radio" name="input7" id="input7" value="C" v-model="dados.q6" />
-            <label for="input7" class="text-xl inline-flex items-center justify-between p-4 text-white bg-white border border-sky-200 rounded-lg cursor-pointer dark:hover:text-sky-300 dark:border-sky-700 dark:peer-checked:text-white peer-checked:border-sky-200 peer-checked:border-collapse box-border peer-checked:text-white hover:text-white hover:bg-sky-200 dark:text-e-400 dark:bg-transparent dark:hover:bg-sky-700 w-max min-w-full transition ease-in-out delay-75"> Entre R$ 50.000 a R$ 100.000 </label>
+            <label for="input7" class="text-xl inline-flex items-center justify-between p-4 text-white bg-white border border-sky-200 rounded-lg cursor-pointer dark:hover:text-sky-300 dark:border-sky-700 dark:peer-checked:text-white peer-checked:border-sky-200 peer-checked:border-collapse box-border peer-checked:text-white hover:text-white hover:bg-sky-200 dark:text-e-400 dark:bg-transparent dark:hover:bg-sky-700 min-w-[320px] transition ease-in-out delay-75"> Entre R$ 50.000 a R$ 100.000 </label>
           </li>
 
-          <li>
+          <li class="list-none">
             <input class="hidden peer" type="radio" name="input8" id="input8" value="D" v-model="dados.q6" />
-            <label for="input8" class="text-xl inline-flex items-center justify-between p-4 text-white bg-white border border-sky-200 rounded-lg cursor-pointer dark:hover:text-sky-300 dark:border-sky-700 dark:peer-checked:text-white peer-checked:border-sky-200 peer-checked:border-collapse box-border peer-checked:text-white hover:text-white hover:bg-sky-200 dark:text-e-400 dark:bg-transparent dark:hover:bg-sky-700 w-max min-w-full transition ease-in-out delay-75"> Acima de R$ 100.000 </label>
+            <label for="input8" class="text-xl inline-flex items-center justify-between p-4 text-white bg-white border border-sky-200 rounded-lg cursor-pointer dark:hover:text-sky-300 dark:border-sky-700 dark:peer-checked:text-white peer-checked:border-sky-200 peer-checked:border-collapse box-border peer-checked:text-white hover:text-white hover:bg-sky-200 dark:text-e-400 dark:bg-transparent dark:hover:bg-sky-700 min-w-[320px] transition ease-in-out delay-75"> Acima de R$ 100.000 </label>
           </li>
 
 
@@ -108,85 +104,85 @@
 
       </div>
 
-      <div id="7" hidden>
+      <div id="7" hidden class="show">
 
-        <h1 class="text-white text-2xl tracking-wide mb-10"> Quanto investe mensalmente em tráfego pago?  </h1>
+        <h1 class="text-white text-2xl tracking-wide mb-10">{{ isActive }} → Quanto investe mensalmente em tráfego pago?  </h1>
 
         <div class="flex flex-col gap-4">
 
-          <li>
+          <li class="list-none">
 
             
             <input class="peer hidden" type="radio" name="input9" id="input9"  value="A" v-model="dados.q7" />
-            <label for="input9" class="text-xl inline-flex items-center justify-between p-4 text-white bg-white border border-sky-200 rounded-lg cursor-pointer dark:hover:text-sky-300 dark:border-sky-700 dark:peer-checked:text-white peer-checked:border-sky-200 peer-checked:border-collapse box-border peer-checked:text-white hover:text-white hover:bg-sky-200 dark:text-e-400 dark:bg-transparent dark:hover:bg-sky-700 w-max min-w-full transition ease-in-out delay-75"> Não invisto ainda. </label>
+            <label for="input9" class="text-xl inline-flex items-center justify-between p-4 text-white bg-white border border-sky-200 rounded-lg cursor-pointer dark:hover:text-sky-300 dark:border-sky-700 dark:peer-checked:text-white peer-checked:border-sky-200 peer-checked:border-collapse box-border peer-checked:text-white hover:text-white hover:bg-sky-200 dark:text-e-400 dark:bg-transparent dark:hover:bg-sky-700 min-w-[320px] transition ease-in-out delay-75"> Não invisto ainda. </label>
           </li>
 
 
 
-          <li>
+          <li class="list-none">
 
             
             <input class="peer hidden" type="radio" name="input10" id="input10"  value="B" v-model="dados.q7" />
-            <label for="input10" class="text-xl inline-flex items-center justify-between p-4 text-white bg-white border border-sky-200 rounded-lg cursor-pointer dark:hover:text-sky-300 dark:border-sky-700 dark:peer-checked:text-white peer-checked:border-sky-200 peer-checked:border-collapse box-border peer-checked:text-white hover:text-white hover:bg-sky-200 dark:text-e-400 dark:bg-transparent dark:hover:bg-sky-700 w-max min-w-full transition ease-in-out delay-75"> Entre R$ 500 A R$1.000  </label>
+            <label for="input10" class="text-xl inline-flex items-center justify-between p-4 text-white bg-white border border-sky-200 rounded-lg cursor-pointer dark:hover:text-sky-300 dark:border-sky-700 dark:peer-checked:text-white peer-checked:border-sky-200 peer-checked:border-collapse box-border peer-checked:text-white hover:text-white hover:bg-sky-200 dark:text-e-400 dark:bg-transparent dark:hover:bg-sky-700 min-w-[320px] transition ease-in-out delay-75"> Entre R$ 500 A R$1.000  </label>
           </li>
 
 
-          <li>
+          <li class="list-none">
 
             
             <input class="peer hidden" type="radio" name="input11" id="input11"  value="C" v-model="dados.q7" />
-            <label for="input11" class="text-xl inline-flex items-center justify-between p-4 text-white bg-white border border-sky-200 rounded-lg cursor-pointer dark:hover:text-sky-300 dark:border-sky-700 dark:peer-checked:text-white peer-checked:border-sky-200 peer-checked:border-collapse box-border peer-checked:text-white hover:text-white hover:bg-sky-200 dark:text-e-400 dark:bg-transparent dark:hover:bg-sky-700 w-max min-w-full transition ease-in-out delay-75"> Entre R$ 2.000 a R$ 5.000 </label>
+            <label for="input11" class="text-xl inline-flex items-center justify-between p-4 text-white bg-white border border-sky-200 rounded-lg cursor-pointer dark:hover:text-sky-300 dark:border-sky-700 dark:peer-checked:text-white peer-checked:border-sky-200 peer-checked:border-collapse box-border peer-checked:text-white hover:text-white hover:bg-sky-200 dark:text-e-400 dark:bg-transparent dark:hover:bg-sky-700 min-w-[320px] transition ease-in-out delay-75"> Entre R$ 2.000 a R$ 5.000 </label>
           </li>
 
 
-          <li>
+          <li class="list-none">
 
             
             <input class="peer hidden" type="radio" name="input12" id="input12"  value="D" v-model="dados.q7" />
-            <label for="input12" class="text-xl inline-flex items-center justify-between p-4 text-white bg-white border border-sky-200 rounded-lg cursor-pointer dark:hover:text-sky-300 dark:border-sky-700 dark:peer-checked:text-white peer-checked:border-sky-200 peer-checked:border-collapse box-border peer-checked:text-white hover:text-white hover:bg-sky-200 dark:text-e-400 dark:bg-transparent dark:hover:bg-sky-700 w-max min-w-full transition ease-in-out delay-75"> Entre R$ 5.000 a R$ 10.000  </label>
+            <label for="input12" class="text-xl inline-flex items-center justify-between p-4 text-white bg-white border border-sky-200 rounded-lg cursor-pointer dark:hover:text-sky-300 dark:border-sky-700 dark:peer-checked:text-white peer-checked:border-sky-200 peer-checked:border-collapse box-border peer-checked:text-white hover:text-white hover:bg-sky-200 dark:text-e-400 dark:bg-transparent dark:hover:bg-sky-700 min-w-[320px] transition ease-in-out delay-75"> Entre R$ 5.000 a R$ 10.000  </label>
           </li>
 
 
-          <li>
+          <li class="list-none">
 
             
             <input class="peer hidden" type="radio" name="input13" id="input13"  value="E" v-model="dados.q7" />
-            <label for="input13" class="text-xl inline-flex items-center justify-between p-4 text-white bg-white border border-sky-200 rounded-lg cursor-pointer dark:hover:text-sky-300 dark:border-sky-700 dark:peer-checked:text-white peer-checked:border-sky-200 peer-checked:border-collapse box-border peer-checked:text-white hover:text-white hover:bg-sky-200 dark:text-e-400 dark:bg-transparent dark:hover:bg-sky-700 w-max min-w-full transition ease-in-out delay-75"> Acima de R$ 10.000 </label>
+            <label for="input13" class="text-xl inline-flex items-center justify-between p-4 text-white bg-white border border-sky-200 rounded-lg cursor-pointer dark:hover:text-sky-300 dark:border-sky-700 dark:peer-checked:text-white peer-checked:border-sky-200 peer-checked:border-collapse box-border peer-checked:text-white hover:text-white hover:bg-sky-200 dark:text-e-400 dark:bg-transparent dark:hover:bg-sky-700 min-w-[320px] transition ease-in-out delay-75"> Acima de R$ 10.000 </label>
           </li>
 
         </div>
       </div>
 
 
-      <div id="8" hidden>
+      <div id="8" hidden class="show">
 
 
-        <h1 class="text-white text-2xl tracking-wide mb-10"> Há quanto tempo sua marca está no mercado?  </h1>
+        <h1 class="text-white text-2xl tracking-wide mb-10">{{ isActive }} → Há quanto tempo sua marca está no mercado?  </h1>
 
         <div class="flex flex-col gap-4">
 
-          <li>
+          <li class="list-none">
 
             <input class="peer hidden" type="radio" name="input14" id="input14"  value="A" v-model="dados.q8" />
-            <label for="input14" class="text-xl inline-flex items-center justify-between p-4 text-white bg-white border border-sky-200 rounded-lg cursor-pointer dark:hover:text-sky-300 dark:border-sky-700 dark:peer-checked:text-white peer-checked:border-sky-200 peer-checked:border-collapse box-border peer-checked:text-white hover:text-white hover:bg-sky-200 dark:text-e-400 dark:bg-transparent dark:hover:bg-sky-700 w-max min-w-full transition ease-in-out delay-75"> Menos de 1 ano </label>
+            <label for="input14" class="text-xl inline-flex items-center justify-between p-4 text-white bg-white border border-sky-200 rounded-lg cursor-pointer dark:hover:text-sky-300 dark:border-sky-700 dark:peer-checked:text-white peer-checked:border-sky-200 peer-checked:border-collapse box-border peer-checked:text-white hover:text-white hover:bg-sky-200 dark:text-e-400 dark:bg-transparent dark:hover:bg-sky-700 min-w-[210px] transition ease-in-out delay-75"> Menos de 1 ano </label>
           </li>
 
-          <li>
+          <li class="list-none">
 
             <input class="peer hidden" type="radio" name="input15" id="input15"  value="B" v-model="dados.q8" />
-            <label for="input15" class="text-xl inline-flex items-center justify-between p-4 text-white bg-white border border-sky-200 rounded-lg cursor-pointer dark:hover:text-sky-300 dark:border-sky-700 dark:peer-checked:text-white peer-checked:border-sky-200 peer-checked:border-collapse box-border peer-checked:text-white hover:text-white hover:bg-sky-200 dark:text-e-400 dark:bg-transparent dark:hover:bg-sky-700 w-max min-w-full transition ease-in-out delay-75"> Entre 1 a 2 anos  </label>
+            <label for="input15" class="text-xl inline-flex items-center justify-between p-4 text-white bg-white border border-sky-200 rounded-lg cursor-pointer dark:hover:text-sky-300 dark:border-sky-700 dark:peer-checked:text-white peer-checked:border-sky-200 peer-checked:border-collapse box-border peer-checked:text-white hover:text-white hover:bg-sky-200 dark:text-e-400 dark:bg-transparent dark:hover:bg-sky-700 min-w-[210px] transition ease-in-out delay-75"> Entre 1 a 2 anos  </label>
           </li>
 
-          <li>
+          <li class="list-none">
 
             <input class="peer hidden" type="radio" name="input16" id="input16" value="C" v-model="dados.q8" />
-            <label for="input16" class="text-xl inline-flex items-center justify-between p-4 text-white bg-white border border-sky-200 rounded-lg cursor-pointer dark:hover:text-sky-300 dark:border-sky-700 dark:peer-checked:text-white peer-checked:border-sky-200 peer-checked:border-collapse box-border peer-checked:text-white hover:text-white hover:bg-sky-200 dark:text-e-400 dark:bg-transparent dark:hover:bg-sky-700 w-max min-w-full transition ease-in-out delay-75"> Entre 2 a 3 anos </label>
+            <label for="input16" class="text-xl inline-flex items-center justify-between p-4 text-white bg-white border border-sky-200 rounded-lg cursor-pointer dark:hover:text-sky-300 dark:border-sky-700 dark:peer-checked:text-white peer-checked:border-sky-200 peer-checked:border-collapse box-border peer-checked:text-white hover:text-white hover:bg-sky-200 dark:text-e-400 dark:bg-transparent dark:hover:bg-sky-700 min-w-[210px] transition ease-in-out delay-75"> Entre 2 a 3 anos </label>
           </li>
 
-          <li>
+          <li class="list-none">
 
             <input class="peer hidden" type="radio" name="input17" id="input17"  value="D" v-model="dados.q8" />
-            <label for="input17" class="text-xl inline-flex items-center justify-between p-4 text-white bg-white border border-sky-200 rounded-lg cursor-pointer dark:hover:text-sky-300 dark:border-sky-700 dark:peer-checked:text-white peer-checked:border-sky-200 peer-checked:border-collapse box-border peer-checked:text-white hover:text-white hover:bg-sky-200 dark:text-e-400 dark:bg-transparent dark:hover:bg-sky-700 w-max min-w-full transition ease-in-out delay-75"> Mais de 3 anos   </label>
+            <label for="input17" class="text-xl inline-flex items-center justify-between p-4 text-white bg-white border border-sky-200 rounded-lg cursor-pointer dark:hover:text-sky-300 dark:border-sky-700 dark:peer-checked:text-white peer-checked:border-sky-200 peer-checked:border-collapse box-border peer-checked:text-white hover:text-white hover:bg-sky-200 dark:text-e-400 dark:bg-transparent dark:hover:bg-sky-700 min-w-[210px] transition ease-in-out delay-75"> Mais de 3 anos   </label>
           </li>
 
 
@@ -195,7 +191,7 @@
 
       </div>
 
-      <div class="text-center pt-14" id="7" hidden>
+      <div class="text-center pt-14 show" id="7" hidden >
 
         <h2 class="font-medium text-2xl text-white">  Tem pressa? fale agora com nosso consultor no WhatsApp!!! </h2>
 
@@ -223,6 +219,27 @@
 
   </div>
 </template>
+
+
+<style>
+
+.show{
+  animation-duration: 1.1s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+</style>
 
 <script setup>
 
