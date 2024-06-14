@@ -195,7 +195,7 @@
 
       </div>
 
-      <div class="text-center" id="7" hidden>
+      <div class="text-center pt-14" id="7" hidden>
 
         <h2 class="font-medium text-2xl text-white">  Tem pressa? fale agora com nosso consultor no WhatsApp!!! </h2>
 
@@ -272,6 +272,7 @@ function next() {
     console.log(button[0])
     button[0].className = 'hidden';
   }
+
 
 }
 
