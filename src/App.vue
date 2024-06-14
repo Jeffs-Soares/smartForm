@@ -20,7 +20,7 @@
       </div>
 
       <div id="2" hidden>
-        <h1 class="text-white text-xl tracking-wide mb-10"> Qual seu whats?</h1>
+        <h1 class="text-white text-2xl tracking-wide mb-10"> Qual seu whats?</h1>
         <div class="relative z-0 w-full mb-5 group">
 
           <input class="block py-2.5 px-0 w-max text-sm bg-transparent border-0 border-b-2 border-sky-300 appearance-none dark:text-white dark:border-sky-600 dark:focus:border-sky-500 focus:outline-none focus:ring-0 focus:border-sky-600 peer text-white" placeholder="" required v-model="dados.q2">
@@ -33,7 +33,7 @@
 
       <div id="3" hidden>
 
-        <h1 class="text-white text-xl tracking-wide mb-10"> Qual seu site?</h1>
+        <h1 class="text-white text-2xl tracking-wide mb-10"> Qual seu site?</h1>
         <div class="relative z-0 w-full mb-5 group">
 
           <input class="block py-2.5 px-0 w-max text-sm bg-transparent border-0 border-b-2 border-sky-300 appearance-none dark:text-white dark:border-sky-600 dark:focus:border-sky-500 focus:outline-none focus:ring-0 focus:border-sky-600 peer text-white" placeholder="" required v-model="dados.q3">
@@ -45,7 +45,7 @@
 
       <div id="4" hidden>
 
-        <h1 class="text-white text-xl tracking-wide mb-10"> Qual seu instagram?</h1>
+        <h1 class="text-white text-2xl tracking-wide mb-10"> Qual seu instagram?</h1>
         <div class="relative z-0 w-full mb-5 group">
 
           <input class="block py-2.5 px-0 w-max text-sm bg-transparent border-0 border-b-2 border-sky-300 appearance-none dark:text-white dark:border-sky-600 dark:focus:border-sky-500 focus:outline-none focus:ring-0 focus:border-sky-600 peer text-white" placeholder="" required v-model="dados.q4">
@@ -57,7 +57,7 @@
 
       <div id="5" hidden>
 
-        <h1 class="text-white text-xl tracking-wide mb-10"> Seu negócio fatura mais de R$ 15.000 por mês? </h1>
+        <h1 class="text-white text-2xl tracking-wide mb-10"> Seu negócio fatura mais de R$ 15.000 por mês? </h1>
         <div class="flex flex-col gap-4">
 
           <li>
@@ -78,7 +78,7 @@
 
       <div id="6" hidden>
 
-        <h1 class="text-white text-xl tracking-wide mb-10"> Qual a média de faturamento mensal do seu negócio ? </h1>
+        <h1 class="text-white text-2xl tracking-wide mb-10"> Qual a média de faturamento mensal do seu negócio ? </h1>
         <div class="flex flex-col gap-4">
 
           <li>
@@ -110,7 +110,7 @@
 
       <div id="7" hidden>
 
-        <h1 class="text-white text-xl tracking-wide mb-10"> Quanto investe mensalmente em tráfego pago?  </h1>
+        <h1 class="text-white text-2xl tracking-wide mb-10"> Quanto investe mensalmente em tráfego pago?  </h1>
 
         <div class="flex flex-col gap-4">
 
@@ -161,7 +161,7 @@
       <div id="8" hidden>
 
 
-        <h1 class="text-white text-xl tracking-wide mb-10"> Há quanto tempo sua marca está no mercado?  </h1>
+        <h1 class="text-white text-2xl tracking-wide mb-10"> Há quanto tempo sua marca está no mercado?  </h1>
 
         <div class="flex flex-col gap-4">
 
@@ -210,7 +210,7 @@
 
     <div class="button">
 
-      <button class="flex gap-2 items-center text-sky-700 hover:text-white border border-sky-700 hover:bg-sky-800 focus:outline-none focus:ring-sky-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-sky-700 dark:text-white dark:hover:text-white dark:hover:bg-sky-600 dark:focus:ring-sky-800" @click="next" > Next
+      <button class="flex gap-2 items-center text-sky-700 hover:text-white border border-sky-700 hover:bg-sky-800 focus:outline-none focus:ring-sky-300 font-medium rounded-lg text-xl px-5 py-2.5 text-center me-2 mb-2 dark:border-sky-700 dark:text-white dark:hover:text-white dark:hover:bg-sky-600 dark:focus:ring-sky-800" @click="next" > Next
 
         <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
