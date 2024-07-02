@@ -1,5 +1,5 @@
 <template>
-  <div id="all" class="grid h-screen bg-black py-24 px-32 bg-cover bg-gradient-to-r from-black via-sky-950 to-sky-600">
+  <div id="all" class="grid h-screen bg-black py-24 px-32 bg-cover bg-gradient-to-r from-black via-sky-950 to-sky-600 max-md:px-8 max-sm:">
     <form class="slide">
 
       <div id="1" class="show">
@@ -147,7 +147,7 @@
 
             
             <input class="peer hidden" type="radio" name="input13" id="input13"  value="E" v-model="dados.q7" />
-            <label for="input13" class="text-xl inline-flex items-center justify-between p-4 text-white bg-white border border-sky-200 rounded-lg cursor-pointer dark:hover:text-sky-300 dark:border-sky-700 dark:peer-checked:text-white peer-checked:border-sky-200 peer-checked:border-collapse box-border peer-checked:text-white hover:text-white hover:bg-sky-200 dark:text-e-400 dark:bg-transparent dark:hover:bg-sky-700 min-w-[320px] transition ease-in-out delay-75"> Acima de R$ 10.000 </label>
+            <label for="input13" class="text-xl inline-flex items-center justify-between p-4 text-white bg-white border border-sky-200 rounded-lg cursor-pointer dark:hover:text-sky-300 dark:border-sky-700 dark:peer-checked:text-white peer-checked:border-sky-200 peer-checked:border-collapse box-border peer-checked:text-white hover:text-white hover:bg-sky-200 dark:text-e-400 dark:bg-transparent dark:hover:bg-sky-700 min-w-[320px] transition ease-in-out delay-75 mb-5"> Acima de R$ 10.000 </label>
           </li>
 
         </div>
